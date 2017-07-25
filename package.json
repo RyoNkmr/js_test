@@ -1,0 +1,30 @@
+{
+  "name": "utility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "isExist.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-json-fixtures-preprocessor": "0.0.6",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-sinon": "^1.0.5",
+    "karma-webpack": "^2.0.4",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.8",
+    "watchify": "^3.9.0",
+    "webpack": "^3.3.0"
+  },
+  "scripts": {
+    "test": "karma start"
+  },
+  "author": "",
+  "license": "ISC"
+}
