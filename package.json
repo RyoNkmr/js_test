@@ -17,13 +17,14 @@
     "karma-mocha-reporter": "^2.2.3",
     "karma-sinon": "^1.0.5",
     "karma-webpack": "^2.0.4",
+    "minimist": "^1.2.0",
     "mocha": "^3.4.2",
     "sinon": "^2.3.8",
     "watchify": "^3.9.0",
     "webpack": "^3.3.0"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start karma.conf.dev.js"
   },
   "author": "",
   "license": "ISC"

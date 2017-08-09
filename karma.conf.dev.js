@@ -1,6 +1,11 @@
 // Karma configuration
 // Generated on Tue Jul 25 2017 12:41:04 GMT+0900 (JST)
 
+const argv = require('minimist')(process.argv.slice(2));
+
+// refs. https://stackoverflow.com/questions/29150998/karma-running-a-single-test-file-from-command-line
+const SPECS = specListString => specListString ? specListString.split(' ').map(path => `./spec/${path}`) : ['spec/**/*.js'];
+
 module.exports = function(config) {
   config.set({
 
@@ -21,16 +26,12 @@ module.exports = function(config) {
     files: [
       'config.mocha.js',
       'app/**/*.js',
-      'spec/**/*.js',
+      ...SPECS(argv.targets),
       'spec/**/*.html',
     ],
 
-
     // list of files to exclude
-    exclude: [
-      'app/isExistQuerySelector.js',
-      'spec/isExistQuerySelector.js',
-    ],
+    exclude: [],
 
 
     // preprocess matching files before serving them to the browser
@@ -62,7 +63,6 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    // logLevel: config.LOG_DEBUG,
     logLevel: config.LOG_INFO,
 
 

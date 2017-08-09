@@ -6,7 +6,11 @@
 - Node.js >= 8
 
 ## Init
-```npm i```
+```$ npm i```
 
-## Run
-```npm test```
+## Run Test
+### Run Entire Tests
+```$ npm test```
+
+### Run Some Tests
+```$ npm test -- --targets 'Calculator.js isExistQuerySelector.js'```
