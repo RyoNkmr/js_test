@@ -1,5 +1,5 @@
 # Javascript Test Playground
-遊び用repo
+Javascriptでテストを書こうハンズオン用のRepositoryです
 
 ## Requirement
 - GoogleChrome
