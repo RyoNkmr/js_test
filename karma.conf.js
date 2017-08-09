@@ -20,7 +20,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'config.mocha.js',
-      'lib/**/*.js',
+      'app/**/*.js',
       'spec/**/*.js',
       'spec/**/*.html',
     ],
@@ -28,13 +28,15 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'app/isExistQuerySelector.js',
+      'spec/isExistQuerySelector.js',
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'lib/**/*.js': ['webpack'],
+      'app/**/*.js': ['webpack'],
       'spec/**/*.js': ['webpack'],
       'spec/**/*.html': ['html2js'],
       'spec/**/*.json': ['json_fixtures'],
@@ -60,6 +62,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    // logLevel: config.LOG_DEBUG,
     logLevel: config.LOG_INFO,
 
 

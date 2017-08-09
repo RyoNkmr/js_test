@@ -28,11 +28,11 @@ function __isExistQuerySelector(rootElement, selector) {
 /**
  * check an element fit given selector
  *
- * @param {HTMLElement} rootElement The element to be checked
- * @param {string} selector the selector you want to find
- * @param {function} callback a function called when the test passed
- * @param {function} fallback a function called  if test failed
- * @return {boolean} is selector exist in rootElement
+ * @param {HTMLElement} rootElement document, body, or element.
+ * @param {string} selector css selector
+ * @param {function} callback a function called if it passed
+ * @param {function} fallback a function called if it failed
+ * @return {boolean|any}
  */
 function isExistQuerySelector(rootElement, selector, callback, fallback) {
   if (arguments.length > 2)  {

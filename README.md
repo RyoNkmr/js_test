@@ -2,8 +2,8 @@
 遊び用repo
 
 ## Requirement
-- Chrome
-- Nodejs
+- GoogleChrome
+- Node.js >= 8
 
 ## Init
 ```npm i```

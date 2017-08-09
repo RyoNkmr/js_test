@@ -1,5 +1,5 @@
 'use strict';
-const isExistQuerySelector = require('../lib/isExistQuerySelector');
+const isExistQuerySelector = require('../app/isExistQuerySelector');
 const assert = require('chai').assert;
 
 suite('isExistQuerySelector', () => {
@@ -7,6 +7,10 @@ suite('isExistQuerySelector', () => {
     fixture.load('isExistQuerySelector.html');
     document.innerHTML = fixture.el;
   });
+
+  teardown(() => {
+    document.innerHTML = '';
+  })
 
   suite('checking ID', () => {
     test('該当要素が存在するとき、trueを返すこと', () => {
@@ -78,8 +82,4 @@ suite('isExistQuerySelector', () => {
       assert.throws(() => isExistQuerySelector({}, '#hoge'), TypeError);
     });
   });
-
-  teardown(() => {
-    document.innerHTML = '';
-  })
 });
